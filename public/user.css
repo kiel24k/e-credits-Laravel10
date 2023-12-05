@@ -1,0 +1,153 @@
+:root {
+    --main-color: rgb(29, 179, 166);
+    --main-primary-color: #f8f9fa;
+    --main-secondary-color: #313233;
+}
+
+body {
+    background-color: var(--main-secondary-color);
+}
+
+section {
+    background-image: url('assets/game-pass-theme.webp');
+}
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+header .navbar-expand a {
+    transition: 1s;
+}
+
+header .navbar-expand a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(29, 179, 166);
+    text-decoration-thickness: 3px;
+    color: rgb(29, 179, 166);
+}
+
+/* section */
+section .row {
+    margin-left: 50px;
+    text-wrap: wrap;
+}
+
+section .items {
+    background-color: rgb(29, 179, 166);
+    border-radius: 8px;
+    border: 0px;
+    box-shadow: 0px 0px 15px 1px rgb(29, 179, 166);
+}
+
+section .items img {
+    border-radius: 5px
+}
+
+section .items p {
+    color: white;
+}
+
+section .items a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: white;
+    color: White;
+    background-color: black;
+}
+
+footer .container {
+    margin: auto;
+    width: 100rem;
+}
+
+footer .info b {
+    font-size: 25px;
+}
+
+footer .info p {
+    font-size: 15px;
+    font-style: italic
+}
+
+footer .col b {
+    font-size: 15px;
+}
+
+footer .row {
+    margin-left: 40px
+}
+
+footer .col img {
+    background-color: white;
+    border-radius: 100%;
+    padding: 6px;
+}
+
+/**Login Section*/
+.login {
+    margin-top: 5rem;
+    margin-bottom: 33rem;
+}
+
+.login .row {}
+
+.login h5 {
+    color: var(--main-color)
+}
+
+.login small {
+    color: var(--main-secondary-color);
+}
+
+.login .section-one {
+    background-color: var(--main-primary-color);
+}
+
+.login input {
+    margin-bottom: 15px;
+    border-radius: 2px;
+    border-color: var(--main-color);
+    border-width: 2px;
+}
+
+.login .forgot-password {
+    margin-top: 15px;
+}
+
+.login .submit {
+    margin-top: 20px;
+}
+
+.login .submit button {
+    border-radius: 15px;
+    width: 120px;
+    background-color: var(--main-color);
+    border: 0px;
+}
+
+.login .info {
+    margin-top: 20px;
+
+}
+
+.login .section-one {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.login .section-two {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url('assets/wp8830688.jpg');
+    background-position: 14cm;
+    background-size: cover;
+}
+
+.login .section-one, .section-two {
+    box-shadow: 1px 1px 15px 2px var(--main-primary-color);
+}
