@@ -25,7 +25,7 @@
             </div>
             <div class="col-3 text-center mt-4">
                 @auth('client')
-                    <button class="btn btn-info"><a href="{{ route('user.profile') }}" class="nav-link"><b class="text-white">{{ Auth('client')->user()->username }}</b></a></button>
+                    <button class="btn btn-info"><a href="{{ route('profile.view') }}" class="nav-link"><b class="text-white">{{ Auth('client')->user()->username }}</b></a></button>
                     <button class="btn btn-danger text-white">
                       <b class="text-white"><a href="{{route('user.logout')}}" class="nav-link">Logout</a></b>
                     </button>

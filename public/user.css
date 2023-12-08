@@ -151,3 +151,7 @@ footer .col img {
 .login .section-one, .section-two {
     box-shadow: 1px 1px 15px 2px var(--main-primary-color);
 }
+
+#profile{
+    background-color: aliceblue;
+}

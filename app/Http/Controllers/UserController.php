@@ -25,14 +25,11 @@ class UserController extends Controller
     {
         return view('user.components.signup');
     }
-    public function userProfile(){
-        return view('user.components.profile');
-    }
     public function userSignupAccount(Request $req)
     {
         $req->validate([
             'username' => 'required|string|max:9',
-            'email' => 'required|unique:all_users,email',
+            'email' => 'required|unique:clients,email',
             'password' => 'required'
         ]);
         client::create([
