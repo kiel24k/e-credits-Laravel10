@@ -47,20 +47,27 @@ class UserController extends Controller
             'password' => 'required',
         ]);
         if (Auth::guard('client')->attempt($cred)) {
-            return redirect()->route('user.section');
+            if(Auth('client')->user()->user_type == 'user'){
+                return redirect()->route('user.section');
+            }
+            else if(Auth('client')->user()->user_type == 'admin'){
+                if(Auth::guard('admin')->attempt($cred)){
+                    return redirect()->route('admin.add.view');
+                }
+            }
         }
         return back()->withErrors([
             'user_email' => 'Your Email Not Registered'
         ]);
     }
-    public function userLogout(Request $request){
+    public function userLogout(Request $request)
+    {
         Auth::logout();
 
-    $request->session()->invalidate();
+        $request->session()->invalidate();
 
-    $request->session()->regenerateToken();
+        $request->session()->regenerateToken();
 
-    return redirect('/');
+        return redirect('/');
     }
 }
-

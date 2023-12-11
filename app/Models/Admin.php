@@ -6,16 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-
-class client extends Authenticatable
+class Admin extends Authenticatable
 {
     use HasFactory;
-    protected $table = 'clients';
+    protected $table = 'admins';
     protected $fillable = [
-                'username',
-                'email',
-                'user_type',
-                'password',
+        'admin_email',
+        'admin_password',
 
     ];
+    public $timestamps = true;
 }

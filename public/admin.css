@@ -1,0 +1,71 @@
+:root{
+    --extra-color:rgb(252, 249, 249);
+    --main-color: #424040;
+    --primary-color:#EA445A;
+    --secondary-color:#74F0ED;
+}
+
+body{
+    background-color:var(--extra-color);
+}
+.navbar{
+    background-color: var(--primary-color);
+}
+.product-section{
+    margin-top:30px;
+    background-color: white;
+    width:fit-content;
+    padding:40px;
+    border-radius: 10px;
+    box-shadow:1px 10px 20px 0px var(--main-color);
+}
+.add-product div{
+    width:350px;
+    margin:auto;
+    margin-bottom:20px;
+}
+.add-product div input{
+
+    padding:20px;
+}
+.add-admin{
+    justify-content:center;
+    margin-top:50px;
+    background-color: var(--extra-color);
+    box-shadow: 1px 10px 20px 0px var(--main-color);
+    border-radius:10px;
+    width:40rem;
+    padding:30px;
+}
+.add-admin .form{
+    margin-top:20px;
+
+}
+.add-admin div{
+    width: 500px;
+    margin:auto;
+    margin-bottom:20px;
+
+}
+.all-product-update{
+background-color: var(--extra-color);
+width:450px;
+margin: auto;
+border-radius: 20px;
+box-shadow: 1px 10px 20px 0px var(--main-color);
+
+}
+.all-product-update .product-update{
+    margin-top:100px;
+    padding:40px;
+
+}
+
+.all-product-update input{
+margin-bottom:20px;
+}
+.all-product-update .submit{
+    text-align:center;
+}
+
+
