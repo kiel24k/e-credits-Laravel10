@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\models\client;
-use App\Models\Admin;
-use App\Models\product;
 use App\Models\User;
+use App\Models\Admin;
+use App\models\client;
+use App\Models\product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -35,23 +36,36 @@ class AdminController extends Controller
     public function adminUpdate(Request $req)
     {
 
-        $products = new product;
+        $req->validate([
+            'product_name' => 'required',
+            'product_type' => 'required',
+            'product_description' => 'string|max:255',
+            'product_quantity' => 'required',
+            'product_price' => 'required',
+            'product_image' => 'required|image|mimes:png,jpg,svg,jpeg,gif'
+        ]);
         $product = product::find($req->id);
-        $product->product_name = $req->product_name;
-        $product->product_type = $req->product_type;
-        $product->product_description = $req->product_description;
-        $product->product_quantity = $req->product_quantity;
-        $product->product_price = $req->product_price;
-        if ($image = $req->file('product_image')) {
-            $destinationPath = 'images/';
-            $profileImage = $image->extension();
-            $image->move($destinationPath, $profileImage);
-            $product['product_image'] = $profileImage;
-            $product->update();
+        if ($req->hasFile('product_image')) {
+            $destination = 'images/' . $product->product_Image;
+            if (File::exists($destination)) {
+                File::delete($destination);
+            }
+            $file = $req->file('product_image');
+            $extention = $file->hashName();
+            $filename = $extention;
+            $file->move('images/', $filename);
+            $product->product_image = $filename;
         }
-
+        product::findOrFail($req->id)->update([
+            'product_name' => $req->product_name,
+            'product_type' => $req->product_name,
+            'product_description' => $req->product_description,
+            'product_quantity' => $req->product_quantity,
+            'product_price' => $req->product_price,
+        ]);
+        $product->update();
         return redirect()->route('admin.product');
-        }
+    }
 
 
     public function adminAdd(Request $request)
@@ -110,5 +124,10 @@ class AdminController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect()->route('user.login');
+    }
+    public function delete($id)
+    {
+        product::findOrFail($id)->delete();
+        return redirect()->route('admin.product');
     }
 }

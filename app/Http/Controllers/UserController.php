@@ -6,6 +6,7 @@ use App\Models\AllUser;
 use App\Models\client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -15,7 +16,10 @@ class UserController extends Controller
     }
     public function userSection()
     {
-        return view('user.layouts.section');
+        $item = DB::table('product')
+        ->select('*')
+        ->get();
+        return view('user.layouts.section',compact('item'));
     }
     public function userLogin()
     {
