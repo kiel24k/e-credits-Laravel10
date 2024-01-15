@@ -29,13 +29,6 @@
                         value="{{ $product->product_description }}">
                 </div>
 
-                <div class="product-quantity">
-                    @error('product_quantity')
-                    <p class="text-danger">{{ $message }}</p>
-                @enderror
-                    <input type="text" name="product_quantity" placeholder="Product Quantity" class="form-control"
-                        value="{{ $product->product_quantity }}">
-                </div>
 
                 <div class="product-price">
                     @error('product_price')

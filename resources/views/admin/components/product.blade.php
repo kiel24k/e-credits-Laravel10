@@ -8,7 +8,6 @@
                     <th>Product Name</th>
                     <th>Product Type</th>
                     <th>Product Description</th>
-                    <th>Product Quantity</th>
                     <th>Product Price</th>
                     <th>Action</th>
                 </tr>
@@ -20,7 +19,6 @@
                         <td>{{ $products->product_name }}</td>
                         <td>{{ $products->product_type }}</td>
                         <td>{{ $products->product_description }}</td>
-                        <td>{{ $products->product_quantity }}</td>
                         <td>{{ $products->product_price }}</td>
                         <td class="text-center"><button class="btn btn-success"><a href="{{route('admin.update.view',$products->id)}}" class="nav-link">Edit</a></button>
                             <button class="btn btn-danger"><a href="{{route('admin.delete', $products->id)}}" class="nav-link">Delete</a></button>

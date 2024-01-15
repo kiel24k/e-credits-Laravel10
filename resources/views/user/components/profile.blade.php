@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="search col-4">
-                   <input type="text" name="search" placeholder="Search" class="form-control">
+                    <input type="text" name="search" placeholder="Search" class="form-control">
                 </div>
                 <div class="search-button col-1 ">
                     <button class="btn btn-outline-info">Search</button>
@@ -38,26 +38,23 @@
                 <table class="table table-danger table-bordered table-responsive">
                     <thead class="text-center">
                         <tr>
-                            <th>Picture</th>
-                            <th>Order</th>
+                            <th>Name</th>
                             <th>Type</th>
+                            <th>Quantity</th>
                             <th>Price</th>
-                            <th>Received</th>
-                            <th>Date</th>
+
 
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>img</td>
-                            <td>mdksiadfhsufdkjsfgsdbgffsdg</td>
-                            <td>x100 Emblem</td>
-                            <td>Date receive history</td>
-                            <td class="text-center">
-                                <p class="text-success">Done</p>
-                            </td>
-                            <td>Tuesday 10:30pm</td>
-                        </tr>
+                        @foreach ($infos as $info)
+                            <tr>
+                                <td>{{ $info->product_name }}</td>
+                                <td>{{$info->product_type}}</td>
+                                <td>{{$info->product_quantity}}</td>
+                                <td>${{$info->product_price}}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

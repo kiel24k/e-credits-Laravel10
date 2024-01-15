@@ -37,6 +37,7 @@ route::controller(UserController::class)->group(function () {
 route::controller(PurchaseController::class)->group(function () {
     route::middleware([client::class])->group(function () {
         route::get('user/purchase/{id}', 'userPurchase')->name('user.purchase');
+        route::post('purchased','purchaseProduct')->name('purchase.product');
     });
 });
 route::controller(UserProfile::class)->group(function () {

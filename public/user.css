@@ -3,6 +3,9 @@
     --main-primary-color: #f8f9fa;
     --main-secondary-color: #313233;
 }
+*{
+    font-family: sans-serif;
+}
 
 body {
     background-color: var(--main-secondary-color);
@@ -16,6 +19,7 @@ header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    z-index:9999;
 }
 
 header .navbar-expand a {
@@ -152,6 +156,129 @@ footer .col img {
     box-shadow: 1px 1px 15px 2px var(--main-primary-color);
 }
 
-#profile{
+#profile {
     background-color: aliceblue;
+}
+
+.purchase {
+    display: flex;
+    background-color: ;
+}
+
+.all-purchase {
+    display: ;
+    background-color: green;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    margin: 40px;
+    background-color: white;
+    width: fit-content;
+}
+
+.bg-info {}
+
+.purchase-section-one {
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.purchase-section-one>div {
+    width: 25rem;
+
+
+}
+
+
+.purchase-content-description {
+    display: grid;
+    gap: 20px;
+}
+
+.purchase-description-main {}
+
+.purchase-social-media {}
+
+.purchase-content-form {
+    display: grid;
+    justify-content: center;
+}
+
+.purchase-content-form img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+position: relative;
+    left: 5rem;
+    z-index:2;
+}
+
+.purchase-submit button {
+    width: 20rem;
+    border: 0;
+    height: 3rem;
+    background-color:var(--main-color) ;
+
+}
+
+.purchase-input div {
+    margin: 10px;
+}
+
+.purchase-input input {
+    width: 20rem;
+    height: 3rem;
+}
+
+.purchase-name input {
+    text-align: center;
+    cursor:pointer;
+}
+
+.purchase-type input {
+    text-align: center;
+    cursor:pointer;
+}
+
+.purchase-price input {
+    text-align: center;
+    cursor:pointer;
+    color:white;
+    background-color: rgb(74, 163, 74);
+    border:0;
+    border-radius:10px;
+}
+.purchase-price b{
+    position: absolute;
+    z-index: 999;
+    color:white;
+    left:65.7rem;
+    top:28rem;
+    font-size: 16px;
+}
+
+.purchase-quantity input {
+    text-align:start;
+
+}
+.purchase-info{
+    height: 10px;
+}
+
+.purchase-submit img{
+
+width: 20px;
+height: 20px;
+text-align:center;
+background-color: red;
+position:absolute;
+left:100rem;
+
+
 }

@@ -40,7 +40,6 @@ class AdminController extends Controller
             'product_name' => 'required',
             'product_type' => 'required',
             'product_description' => 'string|max:255',
-            'product_quantity' => 'required',
             'product_price' => 'required',
             'product_image' => 'required|image|mimes:png,jpg,svg,jpeg,gif'
         ]);
@@ -60,7 +59,6 @@ class AdminController extends Controller
             'product_name' => $req->product_name,
             'product_type' => $req->product_name,
             'product_description' => $req->product_description,
-            'product_quantity' => $req->product_quantity,
             'product_price' => $req->product_price,
         ]);
         $product->update();
@@ -92,7 +90,6 @@ class AdminController extends Controller
             'name' => 'required',
             'type' => 'required',
             'description' => 'string|max:255',
-            'quantity' => 'required',
             'price' => 'required',
             'image' => 'required|image|mimes:png,jpg,svg,jpeg,gif'
         ]);
@@ -100,21 +97,14 @@ class AdminController extends Controller
         $product->product_name = $request->name;
         $product->product_type = $request->type;
         $product->product_description = $request->description;
-        $product->product_quantity = $request->quantity;
         $product->product_price = $request->price;
         if ($image = $request->file('image')) {
             $destinationPath = 'images/';
-            $profileImage = $image->extension();
+            $profileImage = $image->hashName();
             $image->move($destinationPath, $profileImage);
             $product['product_image'] = $profileImage;
             $product->save();
-            // product::create([
-            //     'product_name' => $request->name,
-            //     'product_type' => $request->type,
-            //     'product_description' => $request->description,
-            //     'product_quantity' => $request->quantity,
-            //     'product_price' => $request->price,
-            // ]);
+            
             return redirect()->route('admin.product');
         }
     }

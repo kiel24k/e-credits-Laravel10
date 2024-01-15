@@ -19,12 +19,7 @@
             @enderror
             <input type="text" name="type" placeholder="Type" class="form-control">
            </div>
-           <div class="product-quantity">
-            @error('quantity')
-            <p class="text-danger">{{$message}}</p>
-            @enderror
-            <input type="text" name="quantity" placeholder="quantity" class="form-control">
-           </div>
+           
            <div class="product-price">
             @error('price')
             <p class="text-danger">{{$message}}</p>

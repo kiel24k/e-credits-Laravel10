@@ -8,10 +8,10 @@
                 <a href="{{route('admin.product')}}" class="nav-link m-4">Product</a>
             </li>
             <li class="nav-item ">
-                <a href="" class="nav-link m-4">dsd</a>
+                <a href="" class="nav-link m-4">User Status</a>
             </li>
             <li class="nav-item ">
-                <a href="" class="nav-link m-4">dsd</a>
+                <a href="" class="nav-link m-4">Admin Info</a>
             </li>
             <li class="nav-item ">
                 <a href="" class="nav-link m-4">@auth('client')
