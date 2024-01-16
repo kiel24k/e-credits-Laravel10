@@ -4,11 +4,11 @@
         <section class="purchase-section-one ">
             <div class="purchase-content-description">
                 <div class="purchase-description-main">
-                    <h1>{{ $purchase->product_description }}</h1>
+                   <h5> {{$purchase->product_description}}</h5>
                 </div>
-                <div class="purchase-social-media">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-                    adipisci illum nemo distinctio totam porro amet nihil similique id cupiditate, mollitia suscipit!
-                    Praesentium aut maxime, voluptatibus voluptates ducimus voluptas! Possimus.</div>
+                <div class="purchase-social-media">
+
+                </div>
             </div>
             <div class="purchase-content-form bg-info">
                 <form action="{{ route('purchase.product') }}" method="post">
@@ -44,7 +44,7 @@
                             </p>
 
                             @error('product_quantity')
-                                <p class="alert alert-danger">{{$message}}</p>
+                                <p class="alert alert-danger">{{ $message }}</p>
                             @enderror
 
                             <input type="number" name="product_quantity" placeholder="quantity" value="">

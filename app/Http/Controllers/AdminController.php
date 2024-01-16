@@ -50,14 +50,14 @@ class AdminController extends Controller
                 File::delete($destination);
             }
             $file = $req->file('product_image');
-            $extention = $file->hashName();
-            $filename = $extention;
+            $extension = $file->hashName();
+            $filename = $extension;
             $file->move('images/', $filename);
             $product->product_image = $filename;
         }
         product::findOrFail($req->id)->update([
             'product_name' => $req->product_name,
-            'product_type' => $req->product_name,
+            'product_type' => $req->product_type,
             'product_description' => $req->product_description,
             'product_price' => $req->product_price,
         ]);
@@ -104,7 +104,7 @@ class AdminController extends Controller
             $image->move($destinationPath, $profileImage);
             $product['product_image'] = $profileImage;
             $product->save();
-            
+
             return redirect()->route('admin.product');
         }
     }
@@ -120,4 +120,6 @@ class AdminController extends Controller
         product::findOrFail($id)->delete();
         return redirect()->route('admin.product');
     }
+    
+
 }

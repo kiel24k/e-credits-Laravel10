@@ -18,7 +18,11 @@
                             <b>Email: {{ Auth('client')->user()->email }}</b>
                         </div>
                         <div class="Number">
-                            <button class="btn btn-info"><a href="" class="nav-link">Update Profile</a></button>
+                            <button class="btn btn-info"><a href="" class="nav-link">Update Profile</a>
+                            </button>
+                            <button class="btn btn-success text-white">
+                                <a href="{{route('user.section')}}" class="nav-link">Home</a>
+                            </button>
                         </div>
                     </div>
                 @endauth
@@ -27,11 +31,8 @@
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="search col-4">
-                    <input type="text" name="search" placeholder="Search" class="form-control">
-                </div>
-                <div class="search-button col-1 ">
-                    <button class="btn btn-outline-info">Search</button>
+                <div class="search-button col-1 text-center">
+                    <h1>HISTORY</h1>
                 </div>
             </div>
             <div class="container mt-3 ">
@@ -42,6 +43,7 @@
                             <th>Type</th>
                             <th>Quantity</th>
                             <th>Price</th>
+                            <th>Updates</th>
 
 
                         </tr>
@@ -50,14 +52,23 @@
                         @foreach ($infos as $info)
                             <tr>
                                 <td>{{ $info->product_name }}</td>
-                                <td>{{$info->product_type}}</td>
-                                <td>{{$info->product_quantity}}</td>
-                                <td>${{$info->product_price}}</td>
+                                <td>{{ $info->product_type }}</td>
+                                <td>{{ $info->product_quantity }}</td>
+                                <td>${{ $info->product_price }}</td>
+                                <td class="text-center">
+                                    <a href="{{route('delete.history', $info->id)}}">
+                                        <button class="btn btn-success">
+                                            Received
+                                            </button>
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+                {{ $infos->links() }}
             </div>
         </div>
+
     </body>
 @endsection

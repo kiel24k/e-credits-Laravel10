@@ -17,9 +17,9 @@ class UserController extends Controller
     public function userSection()
     {
         $item = DB::table('product')
-        ->select('*')
-        ->get();
-        return view('user.layouts.section',compact('item'));
+            ->select('*')
+            ->get();
+        return view('user.layouts.section', compact('item'));
     }
     public function userLogin()
     {
@@ -32,10 +32,11 @@ class UserController extends Controller
     public function userSignupAccount(Request $req)
     {
         $req->validate([
-            'username' => 'required|string|max:9',
+            'username' => 'required|unique:clients,username|string|max:9',
             'email' => 'required|unique:clients,email',
             'password' => 'required'
         ]);
+        
         client::create([
             'username' => $req->username,
             'email' => $req->email,
@@ -51,11 +52,10 @@ class UserController extends Controller
             'password' => 'required',
         ]);
         if (Auth::guard('client')->attempt($cred)) {
-            if(Auth('client')->user()->user_type == 'user'){
+            if (Auth('client')->user()->user_type == 'user') {
                 return redirect()->route('user.section');
-            }
-            else if(Auth('client')->user()->user_type == 'admin'){
-                if(Auth::guard('admin')->attempt($cred)){
+            } else if (Auth('client')->user()->user_type == 'admin') {
+                if (Auth::guard('admin')->attempt($cred)) {
                     return redirect()->route('admin.add.view');
                 }
             }
@@ -74,9 +74,4 @@ class UserController extends Controller
 
         return redirect('/');
     }
-
-    
-
-
-
 }

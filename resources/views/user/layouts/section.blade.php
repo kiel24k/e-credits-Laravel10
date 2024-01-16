@@ -9,7 +9,7 @@
                             <img src="/images/{{$items->product_image}}" alt class="mx-auto d-block mb-3" width="170" height="170px">
                             <p class="text-center">{{ $items->product_name }}</p>
                             <p class="text-center">{{ $items->product_type }}</p>
-                            <p class="text-center">{{$items->product_price}}</p>
+                            <p class="text-center">₱{{$items->product_price}}</p>
                         </a>
                     </div>
                 @endforeach

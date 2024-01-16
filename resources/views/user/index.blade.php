@@ -16,7 +16,10 @@
 <body>
 
     @if (session('message'))
-        <p class="text-white">{{session('message')}}</p>
+        <p class="text-black alert alert-info text-center">{{session('message')}}
+        </p>
+        </span>
+
     @endif
 
     @include('user.layouts.header')

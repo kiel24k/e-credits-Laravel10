@@ -34,15 +34,17 @@ route::controller(UserController::class)->group(function () {
         route::get('logout', 'userLogout')->name('user.logout');
     });
 });
+
 route::controller(PurchaseController::class)->group(function () {
     route::middleware([client::class])->group(function () {
         route::get('user/purchase/{id}', 'userPurchase')->name('user.purchase');
-        route::post('purchased','purchaseProduct')->name('purchase.product');
+        route::post('purchased', 'purchaseProduct')->name('purchase.product');
     });
 });
 route::controller(UserProfile::class)->group(function () {
     route::middleware([client::class])->group(function () {
         route::get('profile', 'profileView')->name('profile.view');
+        route::Get('delete.history{id}', 'deleteHistory')->name('delete.history');
     });
 });
 
@@ -56,6 +58,7 @@ route::controller(AdminController::class)->group(function () {
         route::get('admin/update/view/{id}', 'adminUpdateView')->name('admin.update.view');
         route::post('admin/update', 'adminUpdate')->name('admin.update');
         route::get('admin/logout', 'adminLogout')->name('admin.logout');
-        route::get('admin/delete{id}', 'delete')->name('admin.delete');
+        route::get('admin/delete', 'delete')->name('admin.delete');
+
     });
 });

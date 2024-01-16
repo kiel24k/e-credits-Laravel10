@@ -184,12 +184,13 @@ footer .col img {
     display: flex;
     color: white;
     justify-content: center;
-    gap: 15px;
+    gap: 2px;
 
 }
 
 .purchase-section-one>div {
     width: 25rem;
+    text-wrap: wrap;
 
 
 }
@@ -200,7 +201,15 @@ footer .col img {
     gap: 20px;
 }
 
-.purchase-description-main {}
+.purchase-description-main {
+    background-color: white;
+    color:gray;
+    min-width:55%;
+    text-overflow: hidden;
+    word-wrap: break-word;
+    text-align:center;
+    padding:20px;
+}
 
 .purchase-social-media {}
 
@@ -234,16 +243,22 @@ position: relative;
 .purchase-input input {
     width: 20rem;
     height: 3rem;
+    border:0;
+    border-radius:10px;
 }
 
 .purchase-name input {
     text-align: center;
     cursor:pointer;
+    border:0;
+    border-radius:10px;
 }
 
 .purchase-type input {
     text-align: center;
     cursor:pointer;
+    border:0;
+    border-radius:10px;
 }
 
 .purchase-price input {
@@ -258,7 +273,7 @@ position: relative;
     position: absolute;
     z-index: 999;
     color:white;
-    left:65.7rem;
+    left:58.5rem;
     top:28rem;
     font-size: 16px;
 }

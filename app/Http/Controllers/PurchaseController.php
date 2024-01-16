@@ -17,7 +17,7 @@ class PurchaseController extends Controller
     {
 
         $req->validate([
-            'product_quantity' => 'required|number',
+            'product_quantity' => 'required|numeric',
         ]);
         $user = ProductAuth::create([
             'owner' => $req->owner,
@@ -31,7 +31,7 @@ class PurchaseController extends Controller
         $user->save();
 
         if ($user) {
-            request()->session()->flash('message', 'Item Added Succesfully');
+            request()->session()->flash('message', 'Item Sent Successfully, check your History!');
         } else {
             request()->session()->flash('error', 'Item not Succesfull');
         }

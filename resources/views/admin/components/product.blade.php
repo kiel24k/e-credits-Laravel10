@@ -13,15 +13,19 @@
                 </tr>
             </thead>
             <tbody>
+              
                 @foreach ($product as $products)
                     <tr>
-                        <td><img src="/images/{{ $products->product_image }}" alt="" height="50px" width="100px"></td>
+                        <td><img src="/images/{{ $products->product_image }}" alt="" height="50px" width="100px">
+                        </td>
                         <td>{{ $products->product_name }}</td>
                         <td>{{ $products->product_type }}</td>
                         <td>{{ $products->product_description }}</td>
                         <td>{{ $products->product_price }}</td>
-                        <td class="text-center"><button class="btn btn-success"><a href="{{route('admin.update.view',$products->id)}}" class="nav-link">Edit</a></button>
-                            <button class="btn btn-danger"><a href="{{route('admin.delete', $products->id)}}" class="nav-link">Delete</a></button>
+                        <td class="text-center"><button class="btn btn-success"><a
+                                    href="{{ route('admin.update.view', $products->id) }}" class="nav-link">Edit</a></button>
+                            <button class="btn btn-danger"><a href="{{ route('admin.delete', $products->id) }}"
+                                    class="nav-link">Delete</a></button>
                         </td>
 
                     </tr>
@@ -29,7 +33,8 @@
             </tbody>
         </table>
         <div class="button text-end">
-            <a href="{{ route('admin.add.product') }}" class=""><button class="btn btn-info text-white">Add Product</button></a>
+            <a href="{{ route('admin.add.product') }}" class=""><button class="btn btn-info text-white">Add
+                    Product</button></a>
         </div>
     </div>
 @endsection
