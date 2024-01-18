@@ -1,5 +1,5 @@
 <header>
-    <div class="container-fluid bg-dark text-white">
+    <div class="container-fluid text-white">
         <div class="row">
             <div class="col-3 text-center">
                 <h4 class="mt-4">BossPacc Gamepass</h4>
@@ -9,7 +9,7 @@
                     <ul class="navbar-nav justify-content-center">
                         </li>
                         <li class="link nav-item m-3">
-                            <a href="" class="nav-link"><b>Home</b></a>
+                            <a href="{{route('home.display')}}" class="nav-link"><b>Home</b></a>
                         </li>
                         <li class="link nav-item m-3">
                             <a href="{{ route('user.section') }}" class="nav-link"><b>Shop</b></a>
