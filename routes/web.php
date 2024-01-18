@@ -29,12 +29,12 @@ route::controller(UserController::class)->group(function () {
     route::post('user/login/account', 'userLoginAccount')->name('user.login.account');
     route::get('main', 'mainSection')->name('main');
     route::get('section', 'userSection')->name('user.section');
-    route::get('home', 'offerDisplay')->name('offer.display');
+    route::get('offer', 'offerDisplay')->name('offer.display');
+    route::get('home', 'homeDisplay')->name('home.display');
 
     route::middleware([client::class])->group(function () {
         route::get('profile', 'userProfile')->name('user.profile');
         route::get('logout', 'userLogout')->name('user.logout');
-
     });
 });
 
@@ -43,7 +43,6 @@ route::controller(PurchaseController::class)->group(function () {
         route::get('user/purchase/{id}', 'userPurchase')->name('user.purchase');
         route::post('purchased', 'purchaseProduct')->name('purchase.product');
     });
-
 });
 route::controller(UserProfile::class)->group(function () {
     route::middleware([client::class])->group(function () {
