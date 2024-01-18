@@ -3,7 +3,8 @@
     --main-primary-color: #f8f9fa;
     --main-secondary-color: #313233;
 }
-*{
+
+* {
     font-family: sans-serif;
 }
 
@@ -12,14 +13,14 @@ body {
 }
 
 section {
-    background-image: url('assets/game-pass-theme.webp');
+    background-image: url('assets/wallpaper.jpg');
 }
 
 header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index:9999;
+    z-index: 9999;
 }
 
 header .navbar-expand a {
@@ -40,22 +41,30 @@ section .row {
 }
 
 section .items {
-    background-color: rgb(29, 179, 166);
+    background-color: rgba(202, 197, 197, 0.7);
+    backdrop-filter: blur;
     border-radius: 8px;
     border: 0px;
-    box-shadow: 0px 0px 15px 1px rgb(29, 179, 166);
+    /* box-shadow: 0px 0px 15px 1px rgb(226, 236, 236); */
+
+
 }
 
 section .items img {
     border-radius: 5px
 }
 
-section .items p {
+section .items a p {
     color: white;
+
+
+
+
 }
 
 section .items a {
     text-decoration: none;
+
 }
 
 footer {
@@ -203,12 +212,12 @@ footer .col img {
 
 .purchase-description-main {
     background-color: white;
-    color:gray;
-    min-width:55%;
+    color: gray;
+    min-width: 55%;
     text-overflow: hidden;
     word-wrap: break-word;
-    text-align:center;
-    padding:20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .purchase-social-media {}
@@ -223,16 +232,16 @@ footer .col img {
     width: 150px;
     height: 150px;
     margin: auto;
-position: relative;
+    position: relative;
     left: 5rem;
-    z-index:2;
+    z-index: 2;
 }
 
 .purchase-submit button {
     width: 20rem;
     border: 0;
     height: 3rem;
-    background-color:var(--main-color) ;
+    background-color: var(--main-color);
 
 }
 
@@ -243,57 +252,216 @@ position: relative;
 .purchase-input input {
     width: 20rem;
     height: 3rem;
-    border:0;
-    border-radius:10px;
+    border: 0;
+    border-radius: 10px;
 }
 
 .purchase-name input {
     text-align: center;
-    cursor:pointer;
-    border:0;
-    border-radius:10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
 }
 
 .purchase-type input {
     text-align: center;
-    cursor:pointer;
-    border:0;
-    border-radius:10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
 }
 
 .purchase-price input {
     text-align: center;
-    cursor:pointer;
-    color:white;
+    cursor: pointer;
+    color: white;
     background-color: rgb(74, 163, 74);
-    border:0;
-    border-radius:10px;
+    border: 0;
+    border-radius: 10px;
 }
-.purchase-price b{
+
+.purchase-price b {
     position: absolute;
     z-index: 999;
-    color:white;
-    left:58.5rem;
-    top:28rem;
+    color: white;
+    left: 58.5rem;
+    top: 28rem;
     font-size: 16px;
 }
 
 .purchase-quantity input {
-    text-align:start;
+    text-align: start;
 
 }
-.purchase-info{
+
+.purchase-info {
     height: 10px;
 }
 
-.purchase-submit img{
+.purchase-submit img {
 
-width: 20px;
-height: 20px;
-text-align:center;
-background-color: red;
-position:absolute;
-left:100rem;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: red;
+    position: absolute;
+    left: 100rem;
 
 
 }
+
+.home {
+    display: grid;
+    position: relative;
+    background-image: url('assets/wallpaper.jpg');
+
+}
+
+.home-section-one {
+    display: grid;
+    margin-top: 2rem;
+
+}
+
+.home-form {
+    max-width: 100%;
+}
+
+.home-search {
+    display: flex;
+    justify-content: center;
+    max-width: 50rem;
+    margin: auto;
+
+}
+
+.home-search input {
+    width: 50rem;
+    height: 40px;
+    border: 0;
+    max-width: 50rem;
+}
+
+
+.home-search button {
+    background-color: gray;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 41px;
+    border: 0;
+}
+
+.home-category-new-product {
+    max-width: 100%;
+    text-align: center;
+    height: 0px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+
+.recently-added {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+}
+
+.recently-added-section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 64%;
+    margin: auto;
+    margin-top: 50px;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+   
+
+
+
+}
+
+.item-one {
+    padding: 10px;
+    background-color: rgba(202, 197, 197, 0.7);
+    backdrop-filter: blur;
+    height: 15rem;
+    border-radius: 10px;
+
+}
+
+.item-one img {
+    border-radius: 5px;
+}
+
+.item-name {
+    width: 100%;
+    text-align: center;
+}
+
+.item-one b {
+    margin-top: 5px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.home-section-two {
+    display: grid;
+}
+
+.new-items {
+    display: grid;
+
+}
+
+
+.home-section-two {
+    display: grid;
+    justify-content: center;
+}
+
+.new-items-title {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.new-items-section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 64%;
+    gap: 20px;
+    margin:auto;
+    justify-content: center;
+
+
+}
+.new-items-content {
+    display: grid;
+
+}
+
+
+.text-white {}
+
+.new-items-content {}
+
+.new-item-one {
+    padding:10px;
+    background-color: rgb(189, 187, 187,0.8);
+    height: 15rem;
+    border-radius: 15px;
+    backdrop-filter: blur;
+}
+.new-item-one img{
+    border-radius: 10px;
+}
+
+.item-name {}

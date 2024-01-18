@@ -36,7 +36,7 @@ class UserController extends Controller
             'email' => 'required|unique:clients,email',
             'password' => 'required'
         ]);
-        
+
         client::create([
             'username' => $req->username,
             'email' => $req->email,
@@ -74,4 +74,9 @@ class UserController extends Controller
 
         return redirect('/');
     }
+    public function offerDisplay(){
+        return view('user.components.home');
+
+    }
+
 }
