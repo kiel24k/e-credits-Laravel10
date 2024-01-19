@@ -35,7 +35,7 @@
                             <p class="purchase-info">
                                 Price:
                             </p>
-                            <b>₱</b>
+
                             <input type="text" name="product_price" value="{{ $purchase->product_price }}" readonly>
                         </div>
                         <div class="purchase-quantity">

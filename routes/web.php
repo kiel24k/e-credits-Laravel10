@@ -61,6 +61,6 @@ route::controller(AdminController::class)->group(function () {
         route::get('admin/update/view/{id}', 'adminUpdateView')->name('admin.update.view');
         route::post('admin/update', 'adminUpdate')->name('admin.update');
         route::get('admin/logout', 'adminLogout')->name('admin.logout');
-        route::get('admin/delete', 'delete')->name('admin.delete');
+        route::get('admin/delete{id}', 'delete')->name('admin.delete');
     });
 });

@@ -16,8 +16,7 @@ class AdminController extends Controller
     public function adminProduct()
     {
         $product = DB::table('product')
-            ->select('*')
-            ->get();
+            ->simplePaginate(5);
         return view('admin.components.product', compact('product'));
     }
     public function adminAddProduct()
@@ -39,9 +38,10 @@ class AdminController extends Controller
         $req->validate([
             'product_name' => 'required',
             'product_type' => 'required',
-            'product_description' => 'string|max:255',
+            'product_description' => 'string|max:255|nullable',
             'product_price' => 'required',
-            'product_image' => 'required|image|mimes:png,jpg,svg,jpeg,gif'
+            'product_image' => 'required|image|mimes:png,jpg,svg,jpeg,gif',
+            'category' => 'required',
         ]);
         $product = product::find($req->id);
         if ($req->hasFile('product_image')) {
@@ -55,12 +55,14 @@ class AdminController extends Controller
             $file->move('images/', $filename);
             $product->product_image = $filename;
         }
-        product::findOrFail($req->id)->update([
+        product::find($req->id)->update([
             'product_name' => $req->product_name,
             'product_type' => $req->product_type,
             'product_description' => $req->product_description,
             'product_price' => $req->product_price,
+            'category' => $req->category,
         ]);
+
         $product->update();
         return redirect()->route('admin.product');
     }
@@ -89,22 +91,23 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'required',
             'type' => 'required',
-            'description' => 'string|max:255',
+            'description' => '|max:255',
             'price' => 'required',
-            'image' => 'required|image|mimes:png,jpg,svg,jpeg,gif'
+            'image' => 'required|image|mimes:png,jpg,svg,jpeg,gif',
+            'category' => 'required',
         ]);
         $product = new product;
         $product->product_name = $request->name;
         $product->product_type = $request->type;
         $product->product_description = $request->description;
         $product->product_price = $request->price;
+        $product->category = $request->category;
         if ($image = $request->file('image')) {
             $destinationPath = 'images/';
             $profileImage = $image->hashName();
             $image->move($destinationPath, $profileImage);
             $product['product_image'] = $profileImage;
             $product->save();
-
             return redirect()->route('admin.product');
         }
     }
@@ -120,6 +123,4 @@ class AdminController extends Controller
         product::findOrFail($id)->delete();
         return redirect()->route('admin.product');
     }
-    
-
 }

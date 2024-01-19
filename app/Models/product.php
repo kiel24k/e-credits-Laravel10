@@ -16,6 +16,7 @@ class product extends Model
         'product_type',
         'product_description',
         'product_price',
+        'category'
     ];
     public $timestamps = true;
 }
