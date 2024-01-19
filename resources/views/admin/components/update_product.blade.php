@@ -37,8 +37,18 @@
                     <input type="text" name="product_price" placeholder="Product Price" class="form-control"
                         value="{{ $product->product_price }}">
                 </div>
+                <div class="category">
+                    @error('category')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
+                   <label for="category">Category</label>
+                   <select name="category" id="">
+                    <option value="new">New</option>
+                    <option value="popular">Popular</option>
+                   </select>
+                </div>
 
-                <div class="product_image">
+                <div class="product_image mt-3">
                     @error('product_image')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
