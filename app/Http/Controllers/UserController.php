@@ -74,12 +74,24 @@ class UserController extends Controller
 
         return redirect('/');
     }
-    public function offerDisplay(){
-        return view('user.components.offer');
+    public function offerDisplay()
+    {
+        $populars = DB::table('product')
+            ->where('category', 'popular')
+            ->get();
+        $news = DB::table('product')
+            ->where('category', 'new')
+            ->get();
 
+        // dd($popular);
+        return view(
+            'user.components.offer',
+            ['populars' => $populars],
+            ['news' => $news]
+        );
     }
-    public function homeDisplay(){
+    public function homeDisplay()
+    {
         return view('user.components.home');
     }
-
 }
