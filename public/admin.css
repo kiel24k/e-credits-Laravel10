@@ -11,6 +11,15 @@ body{
 .navbar{
     background-color: var(--primary-color);
 }
+.table{
+    background-color: red;
+    position:relative;
+   margin:auto;
+
+
+
+
+}
 .product-section{
     margin-top:30px;
     background-color: white;
@@ -42,14 +51,14 @@ body{
 
 }
 .add-admin div{
-    width: 500px;
+    max-width: 500px;
     margin:auto;
     margin-bottom:20px;
 
 }
 .all-product-update{
 background-color: var(--extra-color);
-width:450px;
+max-width:450px;
 margin: auto;
 border-radius: 20px;
 box-shadow: 1px 10px 20px 0px var(--main-color);
@@ -66,6 +75,16 @@ margin-bottom:20px;
 }
 .all-product-update .submit{
     text-align:center;
+}
+.product-button{
+    position: relative;
+    top:2px;
+
+
+}
+.table p{
+    position:absolute;
+    top:43.4rem;
 }
 
 

@@ -4,13 +4,13 @@
         <section class="purchase-section-one ">
             <div class="purchase-content-description">
                 <div class="purchase-description-main">
-                   <h5> {{$purchase->product_description}}</h5>
+                    <h5> {{ $purchase->product_description }}</h5>
                 </div>
                 <div class="purchase-social-media">
 
                 </div>
             </div>
-            <div class="purchase-content-form bg-info">
+            <div class="purchase-content-form bg-secondary">
                 <form action="{{ route('purchase.product') }}" method="post">
                     @csrf
                     <div class="purchase-input">
