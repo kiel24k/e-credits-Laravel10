@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2024 at 07:55 PM
+-- Generation Time: Jan 20, 2024 at 03:13 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -196,7 +196,11 @@ INSERT INTO `product` (`id`, `product_image`, `product_name`, `product_type`, `p
 (3, '0ulA18eXbbdo9atnQG6dN9jCjGngOydubC4sN2ol.jpg', 'Call Of Duty Mobile', 'COD credits', NULL, '50', '2024-01-19 10:46:29', '2024-01-19 10:46:29', 'popular'),
 (4, 'Olx5Hs1W8kC8TZBzHkzfBh7VcpOx3VeslmkNLsGi.jpg', 'Core', 'coin/unknown', NULL, '100', '2024-01-19 10:47:00', '2024-01-19 10:47:00', 'new'),
 (5, 'q0W9R2TJDdkDlsfOffJCYLiXJZKcF0xh9EbaHaep.jpg', 'Overwatch', 'coin/unknown', NULL, '12', '2024-01-19 10:47:20', '2024-01-19 10:47:20', 'new'),
-(6, 'udN7XwgF9UtuM8V4uxdX1riWXSiHJAXe8zKZeVf9.jpg', 'Clash Of Clans', 'Gem', NULL, '50', '2024-01-19 10:48:16', '2024-01-19 10:48:16', 'popular');
+(6, 'udN7XwgF9UtuM8V4uxdX1riWXSiHJAXe8zKZeVf9.jpg', 'Clash Of Clans', 'Gem', NULL, '50', '2024-01-19 10:48:16', '2024-01-19 10:48:16', 'popular'),
+(7, '8QVZFJfRd4rFHlIIaLE2UQxzR2Bgtrzz4Cz3SJdn.jpg', 'Clash Of Clanss', 'Gem', NULL, '50', '2024-01-19 17:51:51', '2024-01-19 17:51:51', 'popular'),
+(8, 'ZA60hGaSwCAQF1AvUiF7QaJgJPtfKn5UVKuXmeP9.jpg', 'Clash Of Clanss', 'Gem', NULL, '50', '2024-01-19 17:52:05', '2024-01-19 17:52:05', 'popular'),
+(9, 'dD5NivnRPbjWSabNsKQAPDvCegOrZy0KTrz6gZJj.jpg', 'Clash Of Clansss', 'Gem', NULL, '50', '2024-01-19 17:52:26', '2024-01-19 17:52:26', 'popular'),
+(10, 'bvTRZSo8Tib54t5sOJ0Pxmtip4PVvyUmt1TCNVhD.jpg', 'Clash Of Clansss', 'Gem', NULL, '50', '2024-01-19 18:04:04', '2024-01-19 18:04:47', 'new');
 
 -- --------------------------------------------------------
 
@@ -353,7 +357,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `product_auths`
