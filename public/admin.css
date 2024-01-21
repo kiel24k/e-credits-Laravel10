@@ -1,90 +1,149 @@
-:root{
-    --extra-color:rgb(252, 249, 249);
+:root {
+    --extra-color: rgb(252, 249, 249);
     --main-color: #424040;
-    --primary-color:#EA445A;
-    --secondary-color:#74F0ED;
+    --primary-color: #EA445A;
+    --secondary-color: #74F0ED;
 }
 
-body{
-    background-color:var(--extra-color);
+body {
+    background-color: var(--extra-color);
 }
-.navbar{
+
+.navbar {
     background-color: var(--primary-color);
 }
-.table{
+
+.table {
     background-color: red;
-    position:relative;
-   margin:auto;
+    position: relative;
+    margin: auto;
 
 
 
 
 }
-.product-section{
-    margin-top:30px;
+
+.product-section {
+    margin-top: 30px;
     background-color: white;
-    width:fit-content;
-    padding:40px;
+    width: fit-content;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow:1px 10px 20px 0px var(--main-color);
+    box-shadow: 1px 10px 20px 0px var(--main-color);
 }
-.add-product div{
-    width:350px;
-    margin:auto;
-    margin-bottom:20px;
-}
-.add-product div input{
 
-    padding:20px;
+.add-product div {
+    width: 350px;
+    margin: auto;
+    margin-bottom: 20px;
 }
-.add-admin{
-    justify-content:center;
-    margin-top:50px;
+
+.add-product div input {
+
+    padding: 20px;
+}
+
+.add-admin {
+    justify-content: center;
+    margin-top: 50px;
     background-color: var(--extra-color);
     box-shadow: 1px 10px 20px 0px var(--main-color);
-    border-radius:10px;
-    width:40rem;
-    padding:30px;
+    border-radius: 10px;
+    width: 40rem;
+    padding: 30px;
 }
-.add-admin .form{
-    margin-top:20px;
+
+.add-admin .form {
+    margin-top: 20px;
 
 }
-.add-admin div{
+
+.add-admin div {
     max-width: 500px;
-    margin:auto;
-    margin-bottom:20px;
-
-}
-.all-product-update{
-background-color: var(--extra-color);
-max-width:450px;
-margin: auto;
-border-radius: 20px;
-box-shadow: 1px 10px 20px 0px var(--main-color);
-
-}
-.all-product-update .product-update{
-    margin-top:100px;
-    padding:40px;
+    margin: auto;
+    margin-bottom: 20px;
 
 }
 
-.all-product-update input{
-margin-bottom:20px;
+.all-product-update {
+    background-color: var(--extra-color);
+    max-width: 450px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 1px 10px 20px 0px var(--main-color);
+
 }
-.all-product-update .submit{
-    text-align:center;
+
+.all-product-update .product-update {
+    margin-top: 100px;
+    padding: 40px;
+
 }
-.product-button{
+
+.all-product-update input {
+    margin-bottom: 20px;
+}
+
+.all-product-update .submit {
+    text-align: center;
+}
+
+.product-button {
     position: relative;
-    top:2px;
+    top: 2px;
 
 
 }
-.table p{
-    position:absolute;
-    top:43.4rem;
+
+.table p {
+    position: absolute;
+    top: 43.4rem;
 }
 
+.section-income {
+    width: 100%;
+    height: 100%;
+}
+
+.income-content {
+    display: flex;
+    margin: auto;
+    gap:20px;
+    max-width: 40rem;
+    position:relative;
+    top:50px;
+
+
+}
+.income-content > div{
+    width:50%;
+    height: 15rem;
+    text-align:center;
+    background-color: rgb(192, 192, 185);
+    border-radius: 25px;
+    box-shadow: 1px 1px 25px 0px rgb(132, 163, 132);
+}
+
+
+.income-user b {
+font-size:25px;
+
+}
+
+.income-value b {
+    font-size: 25px;
+}
+.income-user p{
+    width: fit-content;
+    margin:auto;
+    margin-top:25px;
+    font-size: 50px;
+
+}
+.income-value p{
+    width:fit-content;
+    margin:auto;
+    margin-top:25px;
+    font-size: 50px;
+}
 

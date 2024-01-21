@@ -123,4 +123,17 @@ class AdminController extends Controller
         product::findOrFail($id)->delete();
         return redirect()->route('admin.product');
     }
+    public function income()
+    {
+        $income = DB::table('product_auths')
+            ->sum('product_price');
+        $owner = DB::table('product_auths')
+            ->count('owner');
+
+        return view(
+            'admin.components.income',
+            ['income' => $income],
+            ['owner' => $owner]
+        );
+    }
 }

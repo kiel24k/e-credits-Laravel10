@@ -18,8 +18,6 @@
                             <b>Email: {{ Auth('client')->user()->email }}</b>
                         </div>
                         <div class="Number">
-                            <button class="btn btn-info"><a href="" class="nav-link">Update Profile</a>
-                            </button>
                             <button class="btn btn-success text-white">
                                 <a href="{{route('user.section')}}" class="nav-link">Home</a>
                             </button>
@@ -56,11 +54,7 @@
                                 <td>{{ $info->product_quantity }}</td>
                                 <td>${{ $info->product_price }}</td>
                                 <td class="text-center">
-                                    <a href="{{route('delete.history', $info->id)}}">
-                                        <button class="btn btn-success">
-                                            Received
-                                            </button>
-                                    </a>
+                                   <a href="{{route('user.section')}}" ><p class="text-success">Received</p></a>
                                 </td>
                             </tr>
                         @endforeach

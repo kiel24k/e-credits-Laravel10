@@ -34,15 +34,20 @@ class UserController extends Controller
         $req->validate([
             'username' => 'required|unique:clients,username|string|max:9',
             'email' => 'required|unique:clients,email',
-            'password' => 'required'
+            'password' => 'required|min:9|max:15'
         ]);
 
-        client::create([
+        $signup = client::create([
             'username' => $req->username,
             'email' => $req->email,
             'password' => bcrypt($req->password),
             'user_type' => 'user'
         ]);
+        if($signup){
+            request()->session()->flash('success', 'Signup Successfull!');
+        }else{
+            request()->session()->flash('error', 'Login Not Success');
+        }
         return redirect()->route('user.login');
     }
     public function userLoginAccount(Request $req)
@@ -94,4 +99,9 @@ class UserController extends Controller
     {
         return view('user.components.home');
     }
+    public function aboutPage(){
+    {
+        return view('user.layouts.about');
+    }
+}
 }

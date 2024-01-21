@@ -22,7 +22,7 @@
                                     @error('password')
                                     <p>{{$message}}</p>
                                     @enderror
-                                    <input type="text" name="password" placeholder="Password" class="form-control">
+                                    <input type="password" name="password" placeholder="Password" class="form-control">
                                     <div class="forgot-password text-end">
                                         <a href="">Forgot Password?</a>
                                     </div>
