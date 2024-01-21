@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2024 at 03:13 AM
+-- Generation Time: Jan 21, 2024 at 10:18 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -89,7 +89,9 @@ INSERT INTO `clients` (`id`, `username`, `email`, `password`, `user_type`, `crea
 (7, 'Garth Grady V', 'leonard81@example.com', '$2y$12$RBWVaxOvRa6Y6wU0TPfn1uriYPEAaYguG9FmJbeIgMadIOokL5Rse', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (8, 'Suzanne McCullough', 'akutch@example.net', '$2y$12$VOapTbCPP40C8jHM4LB.YOnthjFYKVDm93H7/cvQPeh4yKsQDD9Pa', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (9, 'Candice Sauer DVM', 'nlueilwitz@example.net', '$2y$12$g7BdFr9JYinX.6C0B2VS1OSp.wzMzX.l4ISFf9eWnFbEl9vbJ9mue', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
-(10, 'Prof. Jakob Cummings III', 'benjamin.renner@example.net', '$2y$12$QBJxNBXIrMysNhUJFscbReFrZt/NTkEbfZd1/q7nx/3.ta8OeAum2', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56');
+(10, 'Prof. Jakob Cummings III', 'benjamin.renner@example.net', '$2y$12$QBJxNBXIrMysNhUJFscbReFrZt/NTkEbfZd1/q7nx/3.ta8OeAum2', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
+(15, 'fef', 'yusername0123@gmail.com', '$2y$12$6iT5Co9l9V7FdPrr7aDDwOaUN8XgfXIpjF/BD8BGQCSfhR/Fen.Na', 'user', '2024-01-21 01:12:56', '2024-01-21 01:12:56'),
+(16, 'haha', 'shesasmar.littel@example.net', '$2y$12$CRjShlubKkfibuvnYX7.4u6QzBgn7yTtfHBY7ufms/CuaCjSYtyvi', 'user', '2024-01-21 01:13:43', '2024-01-21 01:13:43');
 
 -- --------------------------------------------------------
 
@@ -224,8 +226,8 @@ CREATE TABLE `product_auths` (
 --
 
 INSERT INTO `product_auths` (`id`, `owner`, `product_name`, `product_type`, `product_quantity`, `product_price`, `created_at`, `updated_at`) VALUES
-(1, 'user@gmail.com', 'Mobile Legends', 'Diamonds', 2, 100, NULL, NULL),
-(2, 'user@gmail.com', 'Clash Of Clans', 'Gem', 7, 350, NULL, NULL);
+(3, 'user@gmail.com', 'Mobile Legends', 'Diamonds', 7, 140, NULL, NULL),
+(6, 'shemar.littel@example.net', 'Valorant', 'Valo Points', 7, 350, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -333,7 +335,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -363,7 +365,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `product_auths`
 --
 ALTER TABLE `product_auths`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
