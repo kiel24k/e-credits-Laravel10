@@ -31,6 +31,7 @@ route::controller(UserController::class)->group(function () {
     route::get('section', 'userSection')->name('user.section');
     route::get('offer', 'offerDisplay')->name('offer.display');
     route::get('/', 'homeDisplay')->name('home.display');
+    route::get('about', 'aboutPage')->name('about.page');
 
 
     route::middleware([client::class])->group(function () {
@@ -63,5 +64,6 @@ route::controller(AdminController::class)->group(function () {
         route::post('admin/update', 'adminUpdate')->name('admin.update');
         route::get('admin/logout', 'adminLogout')->name('admin.logout');
         route::get('admin/delete{id}', 'delete')->name('admin.delete');
+        route::get('income/info', 'income')->name('income');
     });
 });

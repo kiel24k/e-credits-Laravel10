@@ -8,11 +8,14 @@
                         @csrf
                         <small>GamePass</small>
                         <h5 class="text-center">Login Account</h5>
+                        @if (session('success'))
+                            <p class="alert alert-success">{{session('success')}}</p>
 
-                      @error('user_email')
-                      <p class="alert alert-danger">{{$message}}</p>
+                        @endif
 
-                      @enderror
+                        @error('user_email')
+                            <p class="alert alert-danger">{{ $message }}</p>
+                        @enderror
                         <div class="username mt-4">
                             @error('email')
                                 <p>{{ $message }}</p>
@@ -20,9 +23,9 @@
                             <input type="text" name="email" placeholder="Email" class="form-control">
                             <div class="password">
                                 @error('password')
-                                 <p>{{$message}}</p>
+                                    <p>{{ $message }}</p>
                                 @enderror
-                                <input type="text" name="password" placeholder="Password" class="form-control">
+                                <input type="password" name="password" placeholder="Password" class="form-control">
                                 <div class="forgot-password text-end">
                                     <a href="">Forgot Password?</a>
                                 </div>

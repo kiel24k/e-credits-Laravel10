@@ -18,7 +18,7 @@
                             <a href="{{route('offer.display')}}" class="nav-link"><b>Offer</b></a>
                         </li>
                         <li class="link nav-item m-3">
-                            <a href class="nav-link"><b>About</b></a>
+                            <a href="{{route('about.page')}}" class="nav-link"><b>About</b></a>
                         </li>
                     </ul>
                 </nav>

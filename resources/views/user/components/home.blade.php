@@ -12,7 +12,7 @@
                 </p>
                 <p>
                     <img src="{{ asset('icon/checked.png') }}" alt="" width="35px">
-                    <b>600+ Mobile Carriers in 160+ Countries</b>
+                    <b>Mobile and Pc games service available</b>
                 </p>
                 <p>
                     <img src="{{ asset('icon/checked.png') }}" alt="" width="35px">
@@ -20,7 +20,7 @@
                 </p>
                 <p>
                     <img src="{{ asset('icon/checked.png') }}" alt="" width="35px">
-                    <b>Great offers for instant top ups</b>
+                    <b>Great instant top ups</b>
                 </p>
                 <p>
                     <img src="{{ asset('icon/checked.png') }}" alt="" width="35px">

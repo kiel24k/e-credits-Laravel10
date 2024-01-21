@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    profile
+
     @yield('profile')
 </body>
 

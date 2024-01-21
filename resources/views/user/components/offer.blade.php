@@ -19,12 +19,14 @@
                     </div>
                     <div class="recently-added-section">
                         @foreach ($populars as $popular)
-                            <div class="item-one">
-                                <img src="/images/{{ $popular->product_image }}" width="170px" height="180px" alt="">
-                                <div class="item-name">
-                                    <b class="text-white">{{$popular->product_name}}</b>
+                            <a href="{{route('user.purchase',$popular->id)}}">
+                                <div class="item-one">
+                                    <img src="/images/{{ $popular->product_image }}" width="170px" height="180px" alt="">
+                                    <div class="item-name">
+                                        <b class="text-white">{{$popular->product_name}}</b>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -37,6 +39,7 @@
                 </div>
                 <div class="new-items-section">
                     @foreach ($news as $new )
+                   <a href="{{route('user.purchase',$new->id)}}">
                     <div class="new-items-content">
                         <div class="new-item-one">
                             <img src="/images/{{ $new->product_image }}" width="170px" height="180px" alt="">
@@ -44,6 +47,7 @@
                                 <b class="text-white">{{$new->product_name}}</b>
                             </div>
                         </div>
+                   </a>
                     </div>
 
                     @endforeach
