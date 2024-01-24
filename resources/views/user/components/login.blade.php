@@ -4,14 +4,15 @@
         <div class="container">
             <div class="row mx-auto mt-5 justify-content-center">
                 <div class="section-one col-5 p-5 mt-5 ">
+                    @if(session('success'))
+                    <p class="alert alert-success">{{session('success')}}</p>
+                    @endif
+
                     <form action="{{ route('user.login.account') }}" method="post">
                         @csrf
                         <small>GamePass</small>
                         <h5 class="text-center">Login Account</h5>
-                        @if (session('success'))
-                            <p class="alert alert-success">{{session('success')}}</p>
 
-                        @endif
 
                         @error('user_email')
                             <p class="alert alert-danger">{{ $message }}</p>
@@ -27,7 +28,7 @@
                                 @enderror
                                 <input type="password" name="password" placeholder="Password" class="form-control">
                                 <div class="forgot-password text-end">
-                                    <a href="">Forgot Password?</a>
+                                    <a href="{{ route('forgot.password') }}">Forgot Password?</a>
                                 </div>
                                 <div class="submit text-center">
                                     <button type="submit" class="btn text-white"><b>Login</b></button>

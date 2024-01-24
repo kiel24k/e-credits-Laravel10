@@ -7,6 +7,7 @@ use App\Models\client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -43,9 +44,9 @@ class UserController extends Controller
             'password' => bcrypt($req->password),
             'user_type' => 'user'
         ]);
-        if($signup){
+        if ($signup) {
             request()->session()->flash('success', 'Signup Successfull!');
-        }else{
+        } else {
             request()->session()->flash('error', 'Login Not Success');
         }
         return redirect()->route('user.login');
@@ -99,9 +100,43 @@ class UserController extends Controller
     {
         return view('user.components.home');
     }
-    public function aboutPage(){
-    {
-        return view('user.layouts.about');
+    public function aboutPage()
+    { {
+            return view('user.layouts.about');
+        }
     }
-}
+    public function forgotPassword()
+    {
+        return view('user.components.ForgotPassword');
+    }
+    public function forgotSubmit(Request $request)
+    {
+        $validations = $request->validate([
+            'email' => 'required|exists:clients|email',
+            'password' => 'required|max:15|min:9',
+        ]);
+        $password = DB::table('clients')
+            ->where('email', $request->email)
+            ->update(['password' => Hash::make($request->password)]);
+        if ($password) {
+            return redirect()->route('user.login');
+            request()->session()->flash('success', 'Password reset success!');
+        } else {
+            return redirect()->route('forgot.password')->withErrors($validations);
+        }
+    }
+    // public function passwordReset()
+    // {
+    //     return view('user.components.PasswordReset');
+    // }
+    //     public function resetPassword(Request $request)
+    //     {
+    //         $request->validate([
+    //             'password' => 'required|max:15|min:9'
+    //         ]);
+    //         client::find($request->password)->update([
+    //             'password' => $request->password
+    //         ]);
+    //     }
+    // }
 }

@@ -15,7 +15,8 @@ body {
 section {
     background-image: url('assets/wallpaper.jpg');
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -25,7 +26,7 @@ header {
     top: 0;
     z-index: 9999;
     backdrop-filter: blur(10px);
-   background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 header .navbar-expand a {
@@ -76,8 +77,8 @@ footer {
     background-color: white;
     color: White;
     background-color: black;
-    position:relative;
-    bottom:0;
+    position: relative;
+    bottom: 0;
 
 }
 
@@ -323,6 +324,7 @@ footer .col img {
     position: relative;
     background-image: url('assets/wallpaper.jpg');
 
+
 }
 
 .offer-section-one {
@@ -340,6 +342,7 @@ footer .col img {
     justify-content: center;
     max-width: 50rem;
     margin: auto;
+
 
 }
 
@@ -443,10 +446,11 @@ footer .col img {
 }
 
 .new-items-section {
+
     display: flex;
     flex-wrap: wrap;
-    max-width: 64%;
-    gap: 20px;
+    max-width: 39rem;
+    gap: 10px;
     margin: auto;
     justify-content: center;
 
@@ -462,7 +466,6 @@ footer .col img {
 .text-white {}
 
 .new-items-content {}
-
 .new-item-one {
     padding: 10px;
     background-color: rgb(189, 187, 187, 0.8);
@@ -559,8 +562,8 @@ footer .col img {
     display: grid;
     padding-top: 30px;
     background-color: rgb(226, 221, 221);
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .home-content-three {
@@ -585,42 +588,114 @@ footer .col img {
     border-radius: 10px;
 
 }
+
 .section-about {
     display: grid;
-    margin:auto;
+    margin: auto;
     background-image: url('assets/wallpaper.jpg');
     height: 40rem;
 
     /* backdrop-filter: blur(25px); */
 }
+
 .about-content {
     display: grid;
     background-color: rgba(255, 253, 253, 0.4);
     max-width: 70%;
-    margin:auto;
-    color:White;
+    margin: auto;
+    color: White;
 
 }
+
 .about-one {
-    width: 50% ;
+    width: 50%;
     height: 159px;
-    text-align:center;
+    text-align: center;
 }
-.about-one h1{
-    text-align:center;
+
+.about-one h1 {
+    text-align: center;
 }
 
 .about-two {
-    margin-left:50%;
-    width: 50% ;
+    margin-left: 50%;
+    width: 50%;
     height: 159px;
-    text-align:center;
+    text-align: center;
 }
+
 .about-three {
-    width: 50% ;
+    width: 50%;
     height: 159px;
-    text-align:center;
+    text-align: center;
 }
 
+.forgot {
+    width: 40rem;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+}
+
+.forgot h1 {
+    color: rgb(153, 207, 160);
+}
+
+.forgot input {
+    width: 20rem;
+    margin: auto;
+    border: solid 1px rgb(18, 212, 154);
+}
+
+.forgot button {
+    background-color: rgb(153, 207, 160);
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 6px;
+    text-transform: capitalize;
 
 
+
+}
+
+.forgot-button {
+
+    width: 10rem;
+    margin: auto;
+
+
+}
+
+.form-control {}
+
+.password-reset {
+    width: 40rem;
+    margin: auto;
+    text-align: Center;
+    margin-top:5rem;
+    margin-bottom:5rem;
+    height: 20rem;
+}
+
+.password-reset input {
+    width: 20rem;
+    margin: auto;
+    border: solid 1px rgb(18, 212, 154);
+
+}
+
+.password-reset button {
+    background-color:rgb(153, 207, 160);;
+    margin-top:1rem;
+    border-radius: 10px;
+    padding:6px;
+    border:0;
+}
+.forgot .form-control{
+    margin-bottom:10px;
+}
