@@ -32,6 +32,9 @@ route::controller(UserController::class)->group(function () {
     route::get('offer', 'offerDisplay')->name('offer.display');
     route::get('/', 'homeDisplay')->name('home.display');
     route::get('about', 'aboutPage')->name('about.page');
+    route::get('forgot/password', 'forgotPassword')->name('forgot.password');
+    route::post('forgot', 'forgotSubmit')->name('forgot.submit');
+
 
 
     route::middleware([client::class])->group(function () {
