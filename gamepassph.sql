@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2024 at 10:18 AM
+-- Generation Time: Jan 25, 2024 at 07:16 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -84,14 +84,15 @@ INSERT INTO `clients` (`id`, `username`, `email`, `password`, `user_type`, `crea
 (2, 'Mr.Admin', 'admin@gmail.com', '$2y$12$Xf2JF4S47BSXTFwb6.y6g.pqxhdxPday0asLEA2WMX/rj7KAwb.li', 'admin', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (3, 'Chet Shields', 'shemar.littel@example.net', '$2y$12$OQaDEjWo/N0MXAj1zVo9GeXAKNV5wXYwOO3Uw14S2FFv.MiSK6g4G', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (4, 'Ana Denesik', 'swaniawski.dallin@example.net', '$2y$12$EUDVBkFVe5yMIwH.XOyUvee4tz8H6pcKcIHN9acMC3c2JVJ.NJaA2', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
-(5, 'Dr. Muhammad Harber DVM', 'deanna27@example.com', '$2y$12$Xhj0N7akKwi0H2MBT7LcBuJ6.K.Gmu/u/Oi/ArxAUEshvjbsN9pTi', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
+(5, 'Dr. Muhammad Harber DVM', 'deanna27@example.com', '$2y$12$SwJaXLjyISEHgvTGouiSBONVn0vjv/hzD/FsoIuYO8iu1Z9Nhpxui', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (6, 'Alfonzo Larson', 'reinger.rod@example.com', '$2y$12$j3KaCaoehG4ckfY2A4UZtu0OOq.0BkzdFP.OKRan8vpNKb/IKoLS2', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (7, 'Garth Grady V', 'leonard81@example.com', '$2y$12$RBWVaxOvRa6Y6wU0TPfn1uriYPEAaYguG9FmJbeIgMadIOokL5Rse', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (8, 'Suzanne McCullough', 'akutch@example.net', '$2y$12$VOapTbCPP40C8jHM4LB.YOnthjFYKVDm93H7/cvQPeh4yKsQDD9Pa', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (9, 'Candice Sauer DVM', 'nlueilwitz@example.net', '$2y$12$g7BdFr9JYinX.6C0B2VS1OSp.wzMzX.l4ISFf9eWnFbEl9vbJ9mue', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
 (10, 'Prof. Jakob Cummings III', 'benjamin.renner@example.net', '$2y$12$QBJxNBXIrMysNhUJFscbReFrZt/NTkEbfZd1/q7nx/3.ta8OeAum2', 'user', '2024-01-19 10:15:56', '2024-01-19 10:15:56'),
-(15, 'fef', 'yusername0123@gmail.com', '$2y$12$6iT5Co9l9V7FdPrr7aDDwOaUN8XgfXIpjF/BD8BGQCSfhR/Fen.Na', 'user', '2024-01-21 01:12:56', '2024-01-21 01:12:56'),
-(16, 'haha', 'shesasmar.littel@example.net', '$2y$12$CRjShlubKkfibuvnYX7.4u6QzBgn7yTtfHBY7ufms/CuaCjSYtyvi', 'user', '2024-01-21 01:13:43', '2024-01-21 01:13:43');
+(15, 'fef', 'yusername0123@gmail.com', '$2y$12$5L1MWWc7nZIlQHP4hXM5Eel8emdepNh5nnUh6OxbMSjUN8t6PLd2i', 'user', '2024-01-21 01:12:56', '2024-01-21 01:12:56'),
+(16, 'haha', 'shesasmar.littel@example.net', '$2y$12$CRjShlubKkfibuvnYX7.4u6QzBgn7yTtfHBY7ufms/CuaCjSYtyvi', 'user', '2024-01-21 01:13:43', '2024-01-21 01:13:43'),
+(17, 'haleluya', 'kielkiel@gmail.com', '$2y$12$9HpgXnmr9zDQzYUZw/7ZUuVozjC81XyywUNEnFgBzKAXVKl2ljouK', 'user', '2024-01-24 00:20:41', '2024-01-24 00:20:41');
 
 -- --------------------------------------------------------
 
@@ -193,8 +194,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `product_image`, `product_name`, `product_type`, `product_description`, `product_price`, `created_at`, `updated_at`, `category`) VALUES
-(1, 'WDLT0LmQJ1r9P22wTC4gwHlW6DaF2XHBxcZ7S7eY.jpg', 'Mobile Legends', 'Diamonds', 'gegee', '20', '2024-01-19 10:17:52', '2024-01-19 10:44:56', 'popular'),
-(2, 'eEFMrCjR2eyEcfblb8xOLmAtJO8JHZOaPCccL0Td.png', 'Valorant', 'Valo Points', 'Valorant is a free-to-play first-person tactical hero shooter developed and published by Riot Games', '50', '2024-01-19 10:30:59', '2024-01-19 10:46:09', 'new'),
+(1, 'JJb9ijMKcaF2BToJtiwneGMR7GHSLd6yl6Wu7txr.jpg', 'Mobile Legends', 'Diamonds', 'gegee', '20', '2024-01-19 10:17:52', '2024-01-24 00:36:48', 'new'),
+(2, 'YkbETjRM7yLlO4OEle1wLQJzXCCagGXawt7fQCa3.png', 'Valorant', 'Valo Points', 'Valorant is a free-to-pby Riot Game', '50', '2024-01-19 10:30:59', '2024-01-24 00:36:57', 'new'),
 (3, '0ulA18eXbbdo9atnQG6dN9jCjGngOydubC4sN2ol.jpg', 'Call Of Duty Mobile', 'COD credits', NULL, '50', '2024-01-19 10:46:29', '2024-01-19 10:46:29', 'popular'),
 (4, 'Olx5Hs1W8kC8TZBzHkzfBh7VcpOx3VeslmkNLsGi.jpg', 'Core', 'coin/unknown', NULL, '100', '2024-01-19 10:47:00', '2024-01-19 10:47:00', 'new'),
 (5, 'q0W9R2TJDdkDlsfOffJCYLiXJZKcF0xh9EbaHaep.jpg', 'Overwatch', 'coin/unknown', NULL, '12', '2024-01-19 10:47:20', '2024-01-19 10:47:20', 'new'),
@@ -227,7 +228,8 @@ CREATE TABLE `product_auths` (
 
 INSERT INTO `product_auths` (`id`, `owner`, `product_name`, `product_type`, `product_quantity`, `product_price`, `created_at`, `updated_at`) VALUES
 (3, 'user@gmail.com', 'Mobile Legends', 'Diamonds', 7, 140, NULL, NULL),
-(6, 'shemar.littel@example.net', 'Valorant', 'Valo Points', 7, 350, NULL, NULL);
+(6, 'shemar.littel@example.net', 'Valorant', 'Valo Points', 7, 350, NULL, NULL),
+(7, 'kielkiel@gmail.com', 'Call Of Duty Mobile', 'COD credits', 78, 3900, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -335,7 +337,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -365,7 +367,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `product_auths`
 --
 ALTER TABLE `product_auths`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
